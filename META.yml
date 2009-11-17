@@ -1,0 +1,17 @@
+---
+abstract: 'PX Pay Interface for www.paymentexpress.com'
+author:
+  - 'Fayland Lam <fayland@gmail.com>'
+generated_by: 'Dist::Zilla version 1.093160'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Business-PxPay
+requires:
+  LWP::UserAgent: 0
+  Net::SSLeay: 0
+  XML::Simple: 0
+resources:
+  repository: http://github.com/fayland/business-pxpay/tree
+version: 0.01
