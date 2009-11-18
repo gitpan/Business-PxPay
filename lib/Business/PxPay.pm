@@ -1,5 +1,5 @@
 package Business::PxPay;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 # ABSTRACT: PX Pay Interface for www.paymentexpress.com
 
@@ -144,7 +144,7 @@ Business::PxPay - PX Pay Interface for www.paymentexpress.com
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
