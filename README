@@ -2,7 +2,7 @@ NAME
     Business::PxPay - PX Pay Interface for www.paymentexpress.com
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
         use Business::PxPay;
@@ -52,6 +52,17 @@ DESCRIPTION
 
         By default, we use LWP::UserAgent->new as the UserAgent. you can
         pass "ua" or "ua_args" to use a different one.
+
+    *   "url"
+
+            my $pxpay = Business::PxPay->new(
+                userid => $user,
+                key    => $key,
+                url    => 'https://sec2.paymentexpress.com/pxpay/pxaccess.aspx', # to test?
+            );
+
+        The URL is 'https://www.paymentexpress.com/pxpay/pxaccess.aspx' by
+        default.
 
   Arguments
     All those arguments can be passed into Business::PxPay->new() or pass
@@ -178,7 +189,7 @@ AUTHOR
       Fayland Lam <fayland@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2009 by Fayland Lam.
+    This software is copyright (c) 2010 by Fayland Lam.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as perl itself.

@@ -1,5 +1,5 @@
 package Business::PxPay;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 # ABSTRACT: PX Pay Interface for www.paymentexpress.com
 
@@ -27,7 +27,7 @@ sub new {
     $args->{userid} or croak 'userid is required';
     $args->{key}    or croak 'key is required';
 
-    $args->{url} ||= 'https://sec2.paymentexpress.com/pxpay/pxaccess.aspx';
+    $args->{url} ||= 'https://www.paymentexpress.com/pxpay/pxaccess.aspx';
 
     unless ( $args->{ua} ) {
         my $ua_args = delete $args->{ua_args} || {};
@@ -144,7 +144,7 @@ Business::PxPay - PX Pay Interface for www.paymentexpress.com
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -198,6 +198,16 @@ PxPayUserId & PxPayKey
 =item * C<ua_args>
 
 By default, we use LWP::UserAgent->new as the UserAgent. you can pass C<ua> or C<ua_args> to use a different one.
+
+=item * C<url>
+
+    my $pxpay = Business::PxPay->new(
+        userid => $user,
+        key    => $key,
+        url    => 'https://sec2.paymentexpress.com/pxpay/pxaccess.aspx', # to test?
+    );
+
+The URL is 'https://www.paymentexpress.com/pxpay/pxaccess.aspx' by default.
 
 =back
 
@@ -329,7 +339,7 @@ and you can get the C<TxnData1> in
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Fayland Lam.
+This software is copyright (c) 2010 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as perl itself.
