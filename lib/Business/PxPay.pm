@@ -1,5 +1,8 @@
 package Business::PxPay;
-our $VERSION = '0.03';
+
+BEGIN {
+    $Business::PxPay::VERSION = '0.04';
+}
 
 # ABSTRACT: PX Pay Interface for www.paymentexpress.com
 
@@ -27,7 +30,7 @@ sub new {
     $args->{userid} or croak 'userid is required';
     $args->{key}    or croak 'key is required';
 
-    $args->{url} ||= 'https://www.paymentexpress.com/pxpay/pxaccess.aspx';
+    $args->{url} ||= 'https://sec.paymentexpress.com/pxpay/pxaccess.aspx';
 
     unless ( $args->{ua} ) {
         my $ua_args = delete $args->{ua_args} || {};
@@ -144,7 +147,7 @@ Business::PxPay - PX Pay Interface for www.paymentexpress.com
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -335,14 +338,14 @@ and you can get the C<TxnData1> in
 
 =head1 AUTHOR
 
-  Fayland Lam <fayland@gmail.com>
+Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Fayland Lam.
+This software is copyright (c) 2011 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
-the same terms as perl itself.
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

@@ -2,7 +2,7 @@ NAME
     Business::PxPay - PX Pay Interface for www.paymentexpress.com
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
         use Business::PxPay;
@@ -186,11 +186,11 @@ DESCRIPTION
         my $cart_id = $rtn->{TxnData1}
 
 AUTHOR
-      Fayland Lam <fayland@gmail.com>
+    Fayland Lam <fayland@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Fayland Lam.
+    This software is copyright (c) 2011 by Fayland Lam.
 
     This is free software; you can redistribute it and/or modify it under
-    the same terms as perl itself.
+    the same terms as the Perl 5 programming language system itself.
 
